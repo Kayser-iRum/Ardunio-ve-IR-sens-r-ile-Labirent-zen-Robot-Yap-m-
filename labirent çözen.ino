@@ -53,64 +53,13 @@ void loop()
     Serial.println("donus");
   }
     if(onir == 0 && sagir == 1 && solir == 1){
-//      dur();
-//      donnus++;
-//      for(int i = 0;i<8;i++){
-//        if(donnus == teksayi[i]) {sol(); Serial.println("sol2");}
-//        if(donnus == ciftsayi[i]) {sag(); Serial.println("sag2");}
-//      }
-//     
+
     dur();
     donnus++;
     if(donnus/2 == 0) {sag(); Serial.println("sağ2"); delay(300);}
     else {sol();Serial.println("sol2");delay(300);}}
   }
-////  if(onir == 1 && sagir == 1 && solir == 1){
-////    dur();
-////    }
-////  solir = (digitalRead(solirpin));
-//////  Serial.println(solir);
-//////  delay(1000);
-////  if(solir == 1 && sagir == 0 && onir == 0 )
-////  {
-////  sag();
-////  //Serial.println("sola dönüş");
-////  //delay(1000);
-////  }
-////  onir = (digitalRead(onirpin));
-////  //Serial.println(onir);
-////  //delay(1000);
-////    if (solir == 1 && sagir == 1 && onir == 0 )
-////{
-////    sol ();
-////}
-////  if (onir == 1)
-////  {
-////  ileri();
-////  //Serial.println("ileri dönüş");
-////  //delay(1000);
-////  }
-////  sagir = (digitalRead(sagirpin));
-////  //Serial.println(sagir);
-////  //delay(1000);
-////  if (sagir == 1 && onir == 0 && solir == 0)
-////  {
-////  sol();
-////  //Serial.println("sağa dönüş");
-////  //delay(1000);
-////  }
-//// 
-////  else if ( solir == 0 && onir == 0 && sagir == 0 )
-////{
-//// donus();
-//////Serial.println("dönüş");
-//////  delay(1000);
-////}
-////
-////  else if (solir = 0 && sagir == 0 && onir == 1)
-////  {
-////    ileri ();
-////  }
+
 
 
 void ileri(){  // Robotun ileri yönde hareketi için fonksiyon tanımlıyoruz.
@@ -131,14 +80,7 @@ void sag(){ // Robotun sağa dönme hareketi için fonksiyon tanımlıyoruz.
   analogWrite(MotorLE, 65); // Sol motorun hızı 150
   
 }
-//void geri(){ // Robotun geri yönde hareketi için fonksiyon tanımlıyoruz.
-//  digitalWrite(MotorR1, LOW); // Sağ motorun ileri hareketi pasif
-//  digitalWrite(MotorR2, HIGH); // Sağ motorun geri hareketi aktif
-//  analogWrite(MotorRE, 100); // Sağ motorun hızı 150
-//  digitalWrite(MotorL1, LOW); // Sol motorun ileri hareketi pasif
-//  digitalWrite(MotorL2, HIGH); // Sol motorun geri hareketi aktif
-//  analogWrite(MotorLE, 100); // Sol motorun hızı 150
-//}
+
 void sol(){ // Robotun sağa dönme hareketi için fonksiyon tanımlıyoruz.
   digitalWrite(MotorR1, HIGH); // Sağ motorun ileri hareketi aktif
   digitalWrite(MotorR2, LOW); // Sağ motorun geri hareketi pasif
